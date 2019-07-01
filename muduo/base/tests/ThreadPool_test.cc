@@ -4,17 +4,17 @@
 #include "muduo/base/Logging.h"
 
 #include <stdio.h>
-#include <unistd.h>  // usleep
+#include <unistd.h> // usleep
 
 void print()
 {
   printf("tid=%d\n", muduo::CurrentThread::tid());
 }
 
-void printString(const std::string& str)
+void printString(const std::string &str)
 {
   LOG_INFO << str;
-  usleep(100*1000);
+  usleep(100 * 1000);
 }
 
 void test(int maxSize)
